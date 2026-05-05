@@ -10,6 +10,10 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
+    build-essential \
+    zlib1g-dev \
+    libjpeg-dev \
+    libffi-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/requirements.txt
